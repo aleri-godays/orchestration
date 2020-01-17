@@ -1,0 +1,314 @@
+{
+	"info": {
+		"_postman_id": "5353e0b6-be7c-4c04-871e-7eed4b4f9d24",
+		"name": "Godays",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "FE health",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/health",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"health"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FE me",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/v1/frontend/me",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"frontend",
+						"me"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FE AddEntry",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"date\": \"2006-01-02T15:04:05+07:00\",\n\t\"project_id\": 9,\n\t\"comment\": \"kajshdkjsahd\",\n\t\"duration\": 4564564654564\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/v1/frontend/entry",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"frontend",
+						"entry"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FE GetEntries",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/v1/frontend/entry",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"frontend",
+						"entry"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FE GetEntry",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/v1/frontend/entry/10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"frontend",
+						"entry",
+						"10"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FE UpdateEntry",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"date\": \"2006-01-02T15:04:05+07:00\",\n\t\"project_id\": 9,\n\t\"comment\": \"kajshdkjsahd\",\n\t\"duration\": 4564564654564\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/v1/frontend/entry/10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"frontend",
+						"entry",
+						"10"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FE DeleteEntry",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/v1/frontend/entry/10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"frontend",
+						"entry",
+						"10"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FE AllProjects",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/v1/frontend/project",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"frontend",
+						"project"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FE GetProject",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/v1/frontend/project/8",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"frontend",
+						"project",
+						"8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PRJ All",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:6000/api/v1/project",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6000",
+					"path": [
+						"api",
+						"v1",
+						"project"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PRJ GetByID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:6000/api/v1/project/6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6000",
+					"path": [
+						"api",
+						"v1",
+						"project",
+						"6"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "apikey",
+		"apikey": [
+			{
+				"key": "key",
+				"value": "Cookie",
+				"type": "string"
+			},
+			{
+				"key": "value",
+				"value": "frontend_jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1NzM4ODgwMzgsInVzZXIiOiJtcmFkaWxlIn0.e9B8aYlNRlYc-6-hpEip67RELN-nobt1i594rUpsbp0",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "f30ed308-6b9d-461f-9df7-58f85900a384",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "f6e272a1-78e3-4a48-b174-5123c775710e",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"protocolProfileBehavior": {}
+}

@@ -1,0 +1,42 @@
+version: '3.1'
+services:
+  project:
+    image: git.aleri.de:4567/godays2020/project:master
+    ports:
+      - 6000:6000
+    volumes:
+      - db_project:/data
+    environment:
+      PORT: 6000
+      LOG_LEVEL: DEBUG
+      DB: /data
+      JWT_SECRET: "a8x43ujht63v095vdvzl"
+  timetracking:
+    image: git.aleri.de:4567/godays2020/timetracking:master
+    ports:
+      - 7000:7000
+    volumes:
+      - db_timetracking:/data
+    environment:
+      PORT: 7000
+      LOG_LEVEL: DEBUG
+      DB: /data
+      JWT_SECRET: "a8x43ujht63v095vdvzl"
+  frontend:
+    image: git.aleri.de:4567/godays2020/frontend:master
+    ports:
+      - 5000:5000
+    environment:
+      PORT: 5000
+      LOG_LEVEL: DEBUG
+      PROJECT_URI: http://project:6000
+      TIMETRACKING_URI: http://timetracking:7000
+      OAUTH_CLIENT_ID: $OAUTH_CLIENT_ID
+      OAUTH_CLIENT_SECRET: $OAUTH_CLIENT_SECRET
+      JWT_SECRET: "a8x43ujht63v095vdvzl"
+
+volumes:
+  db_project:
+    driver: local
+  db_timetracking:
+    driver: local
